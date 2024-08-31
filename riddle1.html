@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Riddle 1</title>
+  </head>
+  <body>
+    <h1>Riddle 1</h1>
+    <p>
+      Riddle: I am a three-digit number. My tens digit is five more than my ones
+      digit, and my hundreds digit is eight less than my tens digit. What number
+      am I?
+    </p>
+    <input type="password" id="answer" placeholder="Enter your answer" />
+    <button onclick="checkAnswer()">Submit</button>
+    <p id="result"></p>
+
+    <script>
+      function checkAnswer() {
+        const answer = document.getElementById("answer").value.toLowerCase();
+        const correctAnswer = "194"; // The answer for riddle 1
+
+        if (answer === correctAnswer) {
+          window.location.href = "riddle2.html"; // Redirect to riddle 2
+        } else {
+          document.getElementById("result").textContent =
+            "Incorrect answer. Try again!";
+        }
+      }
+    </script>
+  </body>
+</html>

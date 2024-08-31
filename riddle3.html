@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Riddle 3</title>
+  </head>
+  <body>
+    <h1>Riddle 3</h1>
+    <p>
+      I am a two-digit number. If you reverse the digits and subtract the
+      smaller number from the larger one, the result is 18. What number am I?
+    </p>
+    <input type="password" id="answer" placeholder="Enter your answer" />
+    <button onclick="checkAnswer()">Submit</button>
+    <p id="result"></p>
+
+    <script>
+      function checkAnswer() {
+        const answer = document.getElementById("answer").value.toLowerCase();
+        const correctAnswer = "72"; // The answer for riddle 3
+
+        if (answer === correctAnswer) {
+          window.location.href = "congratulations.html"; // Redirect to the final page
+        } else {
+          document.getElementById("result").textContent =
+            "Incorrect answer. Try again!";
+        }
+      }
+    </script>
+  </body>
+</html>
